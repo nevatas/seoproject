@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.html", "./js/*.js"],
+  content: [
+    "./evelone.ru/public/**/*.{html,js}",
+    "./*/public/**/*.{html,js}" // Для будущих доменов
+  ],
   theme: {
     extend: {
       colors: {

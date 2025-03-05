@@ -1,14 +1,16 @@
 {
-  "name": "landing-page",
+  "name": "seoproject",
   "version": "1.0.0",
-  "description": "SEO-оптимизированный лендинг",
+  "description": "Мультидоменный SEO-оптимизированный проект",
   "main": "index.html",
   "scripts": {
-    "build": "tailwindcss -i ./css/input.css -o ./css/output.css",
-    "watch": "tailwindcss -i ./css/input.css -o ./css/output.css --watch",
-    "serve": "http-server -o"
+    "build:evelone": "tailwindcss -i ./evelone.ru/public/css/input.css -o ./evelone.ru/public/css/output.css",
+    "watch:evelone": "tailwindcss -i ./evelone.ru/public/css/input.css -o ./evelone.ru/public/css/output.css --watch",
+    "build:all": "npm run build:evelone",
+    "deploy:evelone": "rsync -avz --exclude 'node_modules' --exclude '.git' ./evelone.ru/public/ username@ваш-сервер:/var/www/evelone.ru/public/",
+    "deploy:assets": "rsync -avz ./assets/ username@ваш-сервер:/var/www/assets/"
   },
-  "keywords": ["landing", "seo", "alpine", "tailwind"],
+  "keywords": ["landing", "seo", "alpine", "tailwind", "multisite"],
   "author": "",
   "license": "MIT",
   "devDependencies": {
