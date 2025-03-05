@@ -56,7 +56,7 @@
 <body class="bg-[#18162C] text-white font-inter">
     <main>
         <!-- Hero секция - убираем цвет фона, оставляем только фоновое изображение -->
-        <section class="pt-8 pb-20 relative" style="background-image: url('/assets/evelone/section1_bg.jpg'); background-size: cover; background-position: center;">
+        <section class="pt-8 pb-10 relative" style="background-image: url('/assets/evelone/section1_bg.jpg'); background-size: cover; background-position: center;">
             <!-- Уменьшаем прозрачность затемняющего слоя -->
             <div class="absolute inset-0 bg-[#18162C] opacity-50 z-0"></div>
             
@@ -74,15 +74,15 @@
                 
                 <!-- Увеличиваем отрицательный верхний отступ и добавляем z-30 -->
                 <div class="flex flex-col justify-center gap-4 -mt-[80px] md:mt-0 relative z-30">
-                    <!-- Блок с социальными сетями -->
-                    <div class="bg-[#2E2C43] rounded-2xl border border-white border-opacity-20 p-4 w-full max-w-md mx-auto">
-                        <!-- Twitch -->
-                        <a href="https://twitch.tv/evelone192" class="flex items-center justify-between mb-3">
+                    <!-- Блок с социальными сетями - убираем внутренние отступы сверху и снизу -->
+                    <div class="bg-[#2E2C43] rounded-2xl border border-white border-opacity-20 w-full max-w-md mx-auto">
+                        <!-- Twitch - добавляем отступ сверху -->
+                        <a href="https://twitch.tv/evelone192" class="flex items-center justify-between py-3 pt-4 px-4 hover:bg-black hover:bg-opacity-10 transition-all">
                             <div class="flex items-center">
                                 <img src="/assets/social_twitch.jpg" alt="Twitch" class="w-8 h-8 rounded-lg mr-3">
                                 <div>
                                     <span class="text-white font-semibold text-lg">Twitch</span>
-                                    <span class="text-[#8A8A8A] ml-2">evelone192</span>
+                                    <span class="text-[#8A8A8A] ml-2">Evelone192</span>
                                 </div>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#9F9F9F]" viewBox="0 0 20 20" fill="currentColor">
@@ -90,13 +90,16 @@
                             </svg>
                         </a>
                         
-                        <!-- Kick -->
-                        <a href="https://kick.com/evelone251" class="flex items-center justify-between my-3">
+                        <!-- Разделитель - 1px, 7% белый, без отступов -->
+                        <div class="h-[1px] bg-white bg-opacity-[7%]"></div>
+                        
+                        <!-- Kick - стандартные отступы -->
+                        <a href="https://kick.com/evelone251" class="flex items-center justify-between py-3 px-4 hover:bg-black hover:bg-opacity-10 transition-all">
                             <div class="flex items-center">
                                 <img src="/assets/social_kick.jpg" alt="Kick" class="w-8 h-8 rounded-lg mr-3">
                                 <div>
                                     <span class="text-white font-semibold text-lg">Kick</span>
-                                    <span class="text-[#8A8A8A] ml-2">evelone251</span>
+                                    <span class="text-[#8A8A8A] ml-2">Evelone251</span>
                                 </div>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#9F9F9F]" viewBox="0 0 20 20" fill="currentColor">
@@ -104,13 +107,16 @@
                             </svg>
                         </a>
                         
-                        <!-- Telegram -->
-                        <a href="https://t.me/evelone192gg" class="flex items-center justify-between mt-3">
+                        <!-- Разделитель - 1px, 7% белый, без отступов -->
+                        <div class="h-[1px] bg-white bg-opacity-[7%]"></div>
+                        
+                        <!-- Telegram - добавляем отступ снизу -->
+                        <a href="https://t.me/evelone192gg" class="flex items-center justify-between py-3 pb-4 px-4 hover:bg-black hover:bg-opacity-10 transition-all">
                             <div class="flex items-center">
                                 <img src="/assets/social_telegram.jpg" alt="Telegram" class="w-8 h-8 rounded-lg mr-3">
                                 <div>
                                     <span class="text-white font-semibold text-lg">Telegram</span>
-                                    <span class="text-[#8A8A8A] ml-2">evelone192gg</span>
+                                    <span class="text-[#8A8A8A] ml-2">Evelone192gg</span>
                                 </div>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#9F9F9F]" viewBox="0 0 20 20" fill="currentColor">
