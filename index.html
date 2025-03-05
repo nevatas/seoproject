@@ -128,11 +128,62 @@
         </section>
 
         <!-- Обновляем цвета фона для других секций -->
-        <!-- Секция "Новости" -->
+        <!-- Секция "Новости" - меняем цвет фона на 3D2F72 -->
         <section id="features" class="pt-16 pb-16 bg-[#3D2F72]">
             <div class="container mx-auto px-4">
                 <h2 class="text-[21px] font-medium mb-12 text-[#8F7DB4] uppercase tracking-wide mt-0">НОВОСТИ</h2>
-                <!-- Содержимое секции -->
+                
+                <!-- Блок со статьей 1 -->
+                <div class="bg-[#231947] overflow-hidden mb-2 border-t-[6px] border-t-[#C00A54]">
+                    <!-- Контент статьи - переносим заголовок вверх -->
+                    <div class="p-6 pb-0">
+                        <!-- Заголовок статьи: белый, 24pt, межстрочное расстояние 29px -->
+                        <h3 class="text-[24px] font-medium text-white mb-4 leading-[29px]">Evelone192: От Новой Каховки до 2,4 млн подписчиков на Twitch</h3>
+                    </div>
+                    
+                    <!-- Изображение статьи - обновляем путь к изображению -->
+                    <img src="/assets/evelone/news_1.jpg" alt="Evelone192" class="w-full h-auto">
+                    
+                    <!-- Аннотация - добавляем в отдельный блок -->
+                    <div class="p-6 pt-4">
+                        <!-- Аннотация: цвет B3A5D1, 18pt -->
+                        <p class="text-[18px] text-[#B3A5D1]">Узнайте, как Вадим Козаков из небольшого украинского города стал одним из самых популярных стримеров СНГ. История его пути от GTA Vice City до миллионов зрителей и громких турниров по CS2.</p>
+                    </div>
+                </div>
+                
+                <!-- Блок со статьей 2 -->
+                <div class="bg-[#231947] overflow-hidden mb-2 border-t-[6px] border-t-[#C00A54]">
+                    <!-- Контент статьи -->
+                    <div class="p-6 pb-0">
+                        <!-- Заголовок статьи -->
+                        <h3 class="text-[24px] font-medium text-white mb-4 leading-[29px]">Эвелон192 и Evelone Duo Cup 2025: Как турнир покорил CS2</h3>
+                    </div>
+                    
+                    <!-- Изображение статьи -->
+                    <img src="/assets/evelone/news_2.jpg" alt="Evelone Duo Cup 2025" class="w-full h-auto">
+                    
+                    <!-- Аннотация -->
+                    <div class="p-6 pt-4">
+                        <p class="text-[18px] text-[#B3A5D1]">Подробности о турнире Evelone Duo Cup с призовым фондом $200,000, организованном Эвелоном192 в январе 2025 года. Кто победил, какие звёзды участвовали и почему это событие стало знаковым для сообщества CS2.</p>
+                    </div>
+                </div>
+                
+                <!-- Блок со статьей 3 -->
+                <div class="bg-[#231947] overflow-hidden mb-8 border-t-[6px] border-t-[#C00A54]">
+                    <!-- Контент статьи -->
+                    <div class="p-6 pb-0">
+                        <!-- Заголовок статьи -->
+                        <h3 class="text-[24px] font-medium text-white mb-4 leading-[29px]">Эвелон192 в 'ВПИСКА': Сколько зарабатывает стример и на что тратит миллионы?</h3>
+                    </div>
+                    
+                    <!-- Изображение статьи -->
+                    <img src="/assets/evelone/news_3.jpg" alt="Эвелон192 в ВПИСКА" class="w-full h-auto">
+                    
+                    <!-- Аннотация -->
+                    <div class="p-6 pt-4">
+                        <p class="text-[18px] text-[#B3A5D1]">Вадим Козаков раскрыл в интервью "ВПИСКА" свои доходы, автопарк с Lamborghini Urus за 34 млн рублей и мечту об острове в Дубае. Узнайте, как живёт один из топовых стримеров СНГ в 2025 году.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -140,7 +191,150 @@
         <section id="promo" class="pt-16 pb-16">
             <div class="container mx-auto px-4">
                 <h2 class="text-[21px] font-medium mb-12 text-[#8F7DB4] uppercase tracking-wide mt-0">ПРОМОКОДЫ</h2>
-                <!-- Содержимое секции -->
+                
+                <!-- Промокодная карточка Parimatch -->
+                <div class="bg-[#E8E84F] rounded-[24px] p-6 mb-2 shadow-[0_3px_5px_rgba(0,0,0,0.15)]">
+                    <!-- Верхняя часть с логотипом и промокодом -->
+                    <div class="flex items-center">
+                        <!-- Логотип Parimatch -->
+                        <img src="/assets/logo_parimatch.jpg" alt="Parimatch" class="w-16 h-16 rounded-lg flex-shrink-0">
+                        
+                        <!-- Блок с промокодом -->
+                        <div class="flex items-center ml-4 flex-grow">
+                            <!-- Контейнер для промокода с фиксированной высотой -->
+                            <div class="bg-white bg-opacity-40 border border-white border-opacity-80 rounded-lg h-16 flex items-center justify-between px-4 w-full cursor-pointer shadow-[0_3px_5px_rgba(0,0,0,0.15)]" onclick="copyPromoCode()">
+                                <!-- Текст промокода -->
+                                <div id="promo-text-container" class="flex-grow">
+                                    <p class="text-black font-bold uppercase text-[21px] m-0" id="promo-text">EVELONEPM</p>
+                                </div>
+                                
+                                <!-- Иконка копирования -->
+                                <div class="ml-4 focus:outline-none">
+                                    <img src="/assets/icon_copy.svg" alt="Копировать" class="h-8 w-8">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Текст о бонусе на первый депозит -->
+                    <p class="text-black font-semibold text-[18px] mt-4">+100% на первый депозит</p>
+                    
+                    <!-- Кнопка перехода на Париматч -->
+                    <a href="https://parimatch.com" class="block w-full bg-black text-white text-center py-3 rounded-lg font-bold uppercase mt-4 hover:bg-opacity-90 transition-all" onclick="copyPromoCodeAndRedirect(event, 'https://parimatch.com')">
+                        ПЕРЕЙТИ НА ПАРИМАТЧ
+                    </a>
+                    
+                    <!-- Пояснительный текст -->
+                    <p class="text-black font-normal text-[14px] mt-2 tracking-wide">Введи при регистрации или в личном кабинете</p>
+                </div>
+
+                <!-- Промокодная карточка 1win -->
+                <div class="bg-[#1988F3] rounded-[24px] p-6 mb-2 shadow-[0_3px_5px_rgba(0,0,0,0.15)]">
+                    <!-- Верхняя часть с логотипом и промокодом -->
+                    <div class="flex items-center">
+                        <!-- Логотип 1win -->
+                        <img src="/assets/logo_1win.jpg" alt="1win" class="w-16 h-16 rounded-lg flex-shrink-0">
+                        
+                        <!-- Блок с промокодом -->
+                        <div class="flex items-center ml-4 flex-grow">
+                            <!-- Контейнер для промокода с фиксированной высотой -->
+                            <div class="bg-white bg-opacity-40 border border-white border-opacity-80 rounded-lg h-16 flex items-center justify-between px-4 w-full cursor-pointer shadow-[0_3px_5px_rgba(0,0,0,0.15)]" onclick="copyPromoCode1win()">
+                                <!-- Текст промокода -->
+                                <div id="promo-text-container-1win" class="flex-grow">
+                                    <p class="text-black font-bold uppercase text-[21px] m-0" id="promo-text-1win">EVELONE1W</p>
+                                </div>
+                                
+                                <!-- Иконка копирования -->
+                                <div class="ml-4 focus:outline-none">
+                                    <img src="/assets/icon_copy.svg" alt="Копировать" class="h-8 w-8">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Текст о бонусе на первый депозит -->
+                    <p class="text-black font-semibold text-[18px] mt-4">+500% на первый депозит</p>
+                    
+                    <!-- Кнопка перехода на 1win -->
+                    <a href="https://1win.com" class="block w-full bg-black text-white text-center py-3 rounded-lg font-bold uppercase mt-4 hover:bg-opacity-90 transition-all" onclick="copyPromoCodeAndRedirect(event, 'https://1win.com', 'promo-text-1win')">
+                        ПЕРЕЙТИ НА 1WIN
+                    </a>
+                    
+                    <!-- Пояснительный текст -->
+                    <p class="text-black font-normal text-[14px] mt-2 tracking-wide">Введи при регистрации или в личном кабинете</p>
+                </div>
+
+                <!-- Промокодная карточка Winline -->
+                <div class="bg-[#FF9D13] rounded-[24px] p-6 mb-2 shadow-[0_3px_5px_rgba(0,0,0,0.15)]">
+                    <!-- Верхняя часть с логотипом и промокодом -->
+                    <div class="flex items-center">
+                        <!-- Логотип Winline -->
+                        <img src="/assets/logo_winline.jpg" alt="Winline" class="w-16 h-16 rounded-lg flex-shrink-0">
+                        
+                        <!-- Блок с промокодом -->
+                        <div class="flex items-center ml-4 flex-grow">
+                            <!-- Контейнер для промокода с фиксированной высотой -->
+                            <div class="bg-white bg-opacity-40 border border-white border-opacity-80 rounded-lg h-16 flex items-center justify-between px-4 w-full cursor-pointer shadow-[0_3px_5px_rgba(0,0,0,0.15)]" onclick="copyPromoCodeWinline()">
+                                <!-- Текст промокода -->
+                                <div id="promo-text-container-winline" class="flex-grow">
+                                    <p class="text-black font-bold uppercase text-[21px] m-0" id="promo-text-winline">EVELONEWL</p>
+                                </div>
+                                
+                                <!-- Иконка копирования -->
+                                <div class="ml-4 focus:outline-none">
+                                    <img src="/assets/icon_copy.svg" alt="Копировать" class="h-8 w-8">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Текст о бонусе на первый депозит -->
+                    <p class="text-black font-semibold text-[18px] mt-4">Фрибет 10 000 ₽</p>
+                    
+                    <!-- Кнопка перехода на Winline -->
+                    <a href="https://winline.ru" class="block w-full bg-black text-white text-center py-3 rounded-lg font-bold uppercase mt-4 hover:bg-opacity-90 transition-all" onclick="copyPromoCodeAndRedirect(event, 'https://winline.ru', 'promo-text-winline')">
+                        ПЕРЕЙТИ НА WINLINE
+                    </a>
+                    
+                    <!-- Пояснительный текст -->
+                    <p class="text-black font-normal text-[14px] mt-2 tracking-wide">Введи при регистрации или в личном кабинете</p>
+                </div>
+
+                <!-- Промокодная карточка Fonbet -->
+                <div class="bg-[#D02424] rounded-[24px] p-6 mb-8 shadow-[0_3px_5px_rgba(0,0,0,0.15)]">
+                    <!-- Верхняя часть с логотипом и промокодом -->
+                    <div class="flex items-center">
+                        <!-- Логотип Fonbet -->
+                        <img src="/assets/logo_fonbet.jpg" alt="Fonbet" class="w-16 h-16 rounded-lg flex-shrink-0">
+                        
+                        <!-- Блок с промокодом -->
+                        <div class="flex items-center ml-4 flex-grow">
+                            <!-- Контейнер для промокода с фиксированной высотой -->
+                            <div class="bg-white bg-opacity-40 border border-white border-opacity-80 rounded-lg h-16 flex items-center justify-between px-4 w-full cursor-pointer shadow-[0_3px_5px_rgba(0,0,0,0.15)]" onclick="copyPromoCodeFonbet()">
+                                <!-- Текст промокода -->
+                                <div id="promo-text-container-fonbet" class="flex-grow">
+                                    <p class="text-black font-bold uppercase text-[21px] m-0" id="promo-text-fonbet">EVELONEFON</p>
+                                </div>
+                                
+                                <!-- Иконка копирования -->
+                                <div class="ml-4 focus:outline-none">
+                                    <img src="/assets/icon_copy.svg" alt="Копировать" class="h-8 w-8">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Текст о бонусе на первый депозит -->
+                    <p class="text-black font-semibold text-[18px] mt-4">15 000 ₽ бонус</p>
+                    
+                    <!-- Кнопка перехода на Fonbet -->
+                    <a href="https://fonbet.ru" class="block w-full bg-black text-white text-center py-3 rounded-lg font-bold uppercase mt-4 hover:bg-opacity-90 transition-all" onclick="copyPromoCodeAndRedirect(event, 'https://fonbet.ru', 'promo-text-fonbet')">
+                        ПЕРЕЙТИ НА ФОНБЕТ
+                    </a>
+                    
+                    <!-- Пояснительный текст -->
+                    <p class="text-black font-normal text-[14px] mt-2 tracking-wide">Введи при регистрации или в личном кабинете</p>
+                </div>
             </div>
         </section>
 
