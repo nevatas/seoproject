@@ -802,6 +802,10 @@ video {
   width: 58px;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
 .max-w-md {
   max-width: 28rem;
 }
@@ -830,6 +834,10 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.resize {
+  resize: both;
 }
 
 .grid-cols-1 {

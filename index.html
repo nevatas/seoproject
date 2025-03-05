@@ -30,6 +30,8 @@
     
     <!-- Подключение стилей -->
     <link rel="stylesheet" href="css/output.css">
+    <!-- Подключаем десктопные стили -->
+    <link rel="stylesheet" href="css/desktop.css">
     
     <!-- Подключение Alpine.js -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -55,8 +57,8 @@
 </head>
 <body class="bg-[#18162C] text-white font-inter">
     <main>
-        <!-- Hero секция - убираем цвет фона, оставляем только фоновое изображение -->
-        <section class="pt-8 pb-10 relative" style="background-image: url('/assets/evelone/section1_bg.jpg'); background-size: cover; background-position: center;">
+        <!-- Hero секция - добавляем класс для десктопных стилей -->
+        <section class="pt-8 pb-10 relative hero-section" style="background-image: url('/assets/evelone/section1_bg.jpg'); background-size: cover; background-position: center;">
             <!-- Уменьшаем прозрачность затемняющего слоя -->
             <div class="absolute inset-0 bg-[#18162C] opacity-50 z-0"></div>
             
@@ -66,16 +68,14 @@
                     <img src="/assets/evelone/logo.png" alt="Логотип компании" class="max-h-24 md:max-h-32 w-auto object-contain">
                 </div>
                 
-                <!-- Увеличиваем отрицательный верхний отступ для изображения персонажа -->
+                <!-- Добавляем класс для персонажа -->
                 <div class="mb-0 md:mb-10 flex justify-center -mt-8">
-                    <!-- Убираем z-20, чтобы блок с ссылками был выше -->
-                    <img src="/assets/evelone/character.png" alt="Персонаж" class="w-[320px] md:max-w-full h-auto relative">
+                    <img src="/assets/evelone/character.png" alt="Персонаж" class="w-[320px] md:max-w-full h-auto relative hero-character">
                 </div>
                 
-                <!-- Увеличиваем отрицательный верхний отступ и добавляем z-30 -->
+                <!-- Добавляем класс для блока с социальными сетями -->
                 <div class="flex flex-col justify-center gap-4 -mt-[80px] md:mt-0 relative z-30">
-                    <!-- Блок с социальными сетями - убираем внутренние отступы сверху и снизу -->
-                    <div class="bg-[#2E2C43] rounded-2xl border border-white border-opacity-20 w-full max-w-md mx-auto">
+                    <div class="bg-[#2E2C43] rounded-2xl border border-white border-opacity-20 w-full max-w-md mx-auto social-links-container">
                         <!-- Twitch - добавляем отступ сверху -->
                         <a href="https://twitch.tv/evelone192" class="flex items-center justify-between py-3 pt-4 px-4 hover:bg-black hover:bg-opacity-10 transition-all">
                             <div class="flex items-center">
@@ -126,7 +126,7 @@
                     </div>
                     
                     <!-- Заменяем кнопку "Узнать больше" на баннер -->
-                    <a href="https://yandex.ru" class="bg-[#2E2C43] rounded-2xl border border-white border-opacity-20 overflow-hidden max-w-md mx-auto w-full block">
+                    <a href="https://yandex.ru" class="bg-[#2E2C43] rounded-2xl border border-white border-opacity-20 overflow-hidden max-w-md mx-auto w-full block banner-container">
                         <img src="/assets/banner_winline.png" alt="Winline баннер" class="w-full h-auto">
                     </a>
                 </div>
@@ -134,13 +134,13 @@
         </section>
 
         <!-- Обновляем цвета фона для других секций -->
-        <!-- Секция "Новости" - меняем цвет фона на 3D2F72 -->
+        <!-- Секция "Новости" - добавляем классы для карточек -->
         <section id="features" class="pt-16 pb-16 bg-[#3D2F72]">
             <div class="container mx-auto px-4">
                 <h2 class="text-[21px] font-medium mb-12 text-[#8F7DB4] uppercase tracking-wide mt-0">НОВОСТИ</h2>
                 
-                <!-- Блок со статьей 1 -->
-                <div class="bg-[#231947] overflow-hidden mb-2 border-t-[6px] border-t-[#C00A54]">
+                <!-- Добавляем класс news-card для карточек новостей -->
+                <div class="bg-[#231947] overflow-hidden mb-2 border-t-[6px] border-t-[#C00A54] news-card">
                     <!-- Контент статьи - переносим заголовок вверх -->
                     <div class="p-6 pb-0">
                         <!-- Заголовок статьи: белый, 24pt, межстрочное расстояние 29px -->
@@ -157,8 +157,7 @@
                     </div>
                 </div>
                 
-                <!-- Блок со статьей 2 -->
-                <div class="bg-[#231947] overflow-hidden mb-2 border-t-[6px] border-t-[#C00A54]">
+                <div class="bg-[#231947] overflow-hidden mb-2 border-t-[6px] border-t-[#C00A54] news-card">
                     <!-- Контент статьи -->
                     <div class="p-6 pb-0">
                         <!-- Заголовок статьи -->
@@ -174,8 +173,7 @@
                     </div>
                 </div>
                 
-                <!-- Блок со статьей 3 -->
-                <div class="bg-[#231947] overflow-hidden mb-8 border-t-[6px] border-t-[#C00A54]">
+                <div class="bg-[#231947] overflow-hidden mb-8 border-t-[6px] border-t-[#C00A54] news-card">
                     <!-- Контент статьи -->
                     <div class="p-6 pb-0">
                         <!-- Заголовок статьи -->
@@ -193,13 +191,13 @@
             </div>
         </section>
 
-        <!-- Секция "Промокоды" - такой же стиль как у "Новости", но без фона -->
+        <!-- Секция "Промокоды" - добавляем классы для карточек -->
         <section id="promo" class="pt-16 pb-16">
             <div class="container mx-auto px-4">
                 <h2 class="text-[21px] font-medium mb-12 text-[#8F7DB4] uppercase tracking-wide mt-0">ПРОМОКОДЫ</h2>
                 
-                <!-- Промокодная карточка Parimatch -->
-                <div class="bg-[#E8E84F] rounded-[24px] p-6 mb-2 shadow-[0_3px_5px_rgba(0,0,0,0.15)]">
+                <!-- Добавляем класс promo-card для промокодов -->
+                <div class="bg-[#E8E84F] rounded-[24px] p-6 mb-2 shadow-[0_3px_5px_rgba(0,0,0,0.15)] promo-card">
                     <!-- Верхняя часть с логотипом и промокодом -->
                     <div class="flex items-center">
                         <!-- Логотип Parimatch -->
@@ -234,8 +232,7 @@
                     <p class="text-black font-normal text-[14px] mt-2 tracking-wide">Введи при регистрации или в личном кабинете</p>
                 </div>
 
-                <!-- Промокодная карточка 1win -->
-                <div class="bg-[#1988F3] rounded-[24px] p-6 mb-2 shadow-[0_3px_5px_rgba(0,0,0,0.15)]">
+                <div class="bg-[#1988F3] rounded-[24px] p-6 mb-2 shadow-[0_3px_5px_rgba(0,0,0,0.15)] promo-card">
                     <!-- Верхняя часть с логотипом и промокодом -->
                     <div class="flex items-center">
                         <!-- Логотип 1win -->
@@ -270,8 +267,7 @@
                     <p class="text-black font-normal text-[14px] mt-2 tracking-wide">Введи при регистрации или в личном кабинете</p>
                 </div>
 
-                <!-- Промокодная карточка Winline -->
-                <div class="bg-[#FF9D13] rounded-[24px] p-6 mb-2 shadow-[0_3px_5px_rgba(0,0,0,0.15)]">
+                <div class="bg-[#FF9D13] rounded-[24px] p-6 mb-2 shadow-[0_3px_5px_rgba(0,0,0,0.15)] promo-card">
                     <!-- Верхняя часть с логотипом и промокодом -->
                     <div class="flex items-center">
                         <!-- Логотип Winline -->
@@ -306,8 +302,7 @@
                     <p class="text-black font-normal text-[14px] mt-2 tracking-wide">Введи при регистрации или в личном кабинете</p>
                 </div>
 
-                <!-- Промокодная карточка Fonbet -->
-                <div class="bg-[#D02424] rounded-[24px] p-6 mb-8 shadow-[0_3px_5px_rgba(0,0,0,0.15)]">
+                <div class="bg-[#D02424] rounded-[24px] p-6 mb-8 shadow-[0_3px_5px_rgba(0,0,0,0.15)] promo-card">
                     <!-- Верхняя часть с логотипом и промокодом -->
                     <div class="flex items-center">
                         <!-- Логотип Fonbet -->

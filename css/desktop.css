@@ -1,0 +1,117 @@
+/* Стили для десктопной версии */
+@media (min-width: 1024px) {
+    /* Максимальная ширина контейнера */
+    .container {
+        max-width: 1280px;
+    }
+    
+    /* Стили для двухколоночного макета */
+    #desktop-container {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        background-color: rgb(24 22 44);
+    }
+    
+    /* Увеличиваем размер карточек на десктопе */
+    .promo-card {
+        transition: transform 0.3s ease;
+    }
+    
+    .promo-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    /* Стили для секции с персонажем */
+    .hero-section {
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Стили для логотипа */
+    .logo-container {
+        margin-bottom: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .logo-image {
+        max-width: 80% !important;
+        height: auto;
+    }
+    
+    /* Изменяем расположение элементов в hero секции для десктопа */
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Контейнер для персонажа */
+    .character-container {
+        position: absolute;
+        width: 50%;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1; /* Размещаем под контентом */
+        overflow: visible;
+        height: auto;
+    }
+    
+    /* Увеличиваем размер персонажа на десктопе */
+    .hero-character {
+        max-width: none !important;
+        width: 800px !important;
+        height: auto;
+        position: relative;
+        margin: 0;
+    }
+    
+    /* Контейнер для основного контента (персонаж + соцсети) */
+    .hero-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end; /* Выравниваем контент по правому краю */
+        width: 100%;
+        position: relative; /* Для позиционирования персонажа */
+        min-height: 600px;
+    }
+    
+    /* Контейнер для социальных сетей и баннера */
+    .social-banner-container {
+        width: 50%;
+        margin-top: 0 !important;
+        align-items: flex-start;
+        position: relative;
+        z-index: 2; /* Размещаем над персонажем */
+    }
+    
+    /* Стили для блока с социальными сетями */
+    .social-links-container {
+        max-width: 500px !important;
+        margin-left: 0;
+    }
+    
+    /* Стили для баннера */
+    .banner-container {
+        max-width: 500px !important;
+        margin-left: 0;
+    }
+    
+    /* Стили для новостных карточек */
+    .news-card {
+        transition: transform 0.3s ease;
+    }
+    
+    .news-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    /* Стили для контактной секции */
+    #contact-me {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+} 
