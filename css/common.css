@@ -1,0 +1,27 @@
+/* Общие стили для всех устройств */
+
+/* Удаляем стили для обводки */
+
+/* Уменьшаем отступ для заголовков секций на мобильных устройствах */
+@media (max-width: 1023px) {
+    #features, #promo {
+        padding-top: 64px !important; /* Устанавливаем отступ 64px для обеих секций */
+        position: relative;
+        z-index: 2;
+    }
+    
+    #features h2, #promo h2 {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Уменьшаем отступ под последней новостью */
+    .news-card:last-child {
+        margin-bottom: 1rem !important; /* Уменьшаем отступ в два раза (с 2rem до 1rem) */
+    }
+    
+    /* Уменьшаем нижний отступ секции новостей */
+    #features {
+        padding-bottom: 2rem !important; /* Уменьшаем отступ снизу в два раза (с 4rem до 2rem) */
+    }
+} 

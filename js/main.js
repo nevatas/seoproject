@@ -110,11 +110,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     if (promoContent && newsContent) {
                         const promoCol = document.createElement('div');
-                        promoCol.className = 'w-1/2';
+                        promoCol.className = 'promo-column';
                         promoCol.appendChild(promoContent.cloneNode(true));
                         
                         const newsCol = document.createElement('div');
-                        newsCol.className = 'w-1/2';
+                        newsCol.className = 'news-column';
                         newsCol.appendChild(newsContent.cloneNode(true));
                         
                         desktopContainer.appendChild(newsCol);

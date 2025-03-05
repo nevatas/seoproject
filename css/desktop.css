@@ -10,6 +10,45 @@
         padding-top: 4rem;
         padding-bottom: 4rem;
         background-color: rgb(24 22 44);
+        gap: 1rem; /* Уменьшаем отступ между колонками */
+    }
+    
+    /* Изменяем пропорции колонок для более точного соответствия */
+    .news-column {
+        width: 63%; /* Немного уменьшаем ширину новостей */
+        padding-right: 1rem;
+    }
+    
+    .promo-column {
+        width: 37%; /* Увеличиваем ширину промокодов */
+    }
+    
+    /* Увеличиваем отступ между элементами внутри колонок */
+    .news-card {
+        margin-bottom: 1rem; /* Стандартный отступ */
+    }
+    
+    .news-card:not(:last-child) {
+        margin-bottom: 1rem; /* Стандартный отступ между новостями */
+    }
+    
+    /* Последняя новость имеет больший отступ снизу */
+    .news-column .news-card:last-child {
+        margin-bottom: 0;
+    }
+    
+    /* Увеличиваем отступ между промокодами */
+    .promo-card {
+        margin-bottom: 1rem; /* Стандартный отступ */
+    }
+    
+    .promo-card:not(:last-child) {
+        margin-bottom: 1rem; /* Стандартный отступ между промокодами */
+    }
+    
+    /* Последний промокод не имеет отступа снизу */
+    .promo-column .promo-card:last-child {
+        margin-bottom: 0;
     }
     
     /* Увеличиваем размер карточек на десктопе */
@@ -23,49 +62,63 @@
     
     /* Стили для секции с персонажем */
     .hero-section {
-        min-height: 600px;
+        min-height: 800px;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
+        padding-top: 0;
+        position: relative;
+        z-index: 1;
+        overflow: visible; /* Позволяем персонажу выходить за пределы секции */
+    }
+    
+    /* Удаляем псевдоэлемент с фоновым изображением */
+    .hero-section::before {
+        display: none;
+    }
+    
+    /* Возвращаем контейнер персонажа */
+    .character-container {
+        display: block !important;
+        position: absolute;
+        width: 63%;
+        left: 0;
+        bottom: -100px;
+        z-index: 3 !important; /* Выше, чем у логотипа */
+        overflow: visible;
+    }
+    
+    /* Стили для изображения персонажа */
+    .hero-character {
+        max-width: 100% !important;
+        width: auto !important;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        z-index: 3; /* Выше, чем у логотипа */
     }
     
     /* Стили для логотипа */
     .logo-container {
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
         width: 100%;
         display: flex;
         justify-content: center;
+        position: relative;
+        z-index: 2; /* Меньше, чем у персонажа */
     }
     
     .logo-image {
-        max-width: 80% !important;
+        max-width: 100% !important; /* Увеличиваем до 100% ширины контейнера */
         height: auto;
+        max-height: 180px !important; /* Увеличиваем максимальную высоту */
     }
     
     /* Изменяем расположение элементов в hero секции для десктопа */
     .hero-container {
         display: flex;
         flex-direction: column;
-    }
-    
-    /* Контейнер для персонажа */
-    .character-container {
-        position: absolute;
-        width: 50%;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 1; /* Размещаем под контентом */
-        overflow: visible;
-        height: auto;
-    }
-    
-    /* Увеличиваем размер персонажа на десктопе */
-    .hero-character {
-        max-width: none !important;
-        width: 800px !important;
-        height: auto;
-        position: relative;
-        margin: 0;
+        padding-top: 2rem; /* Уменьшаем отступ сверху */
     }
     
     /* Контейнер для основного контента (персонаж + соцсети) */
@@ -73,19 +126,21 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: flex-end; /* Выравниваем контент по правому краю */
+        justify-content: flex-end;
         width: 100%;
-        position: relative; /* Для позиционирования персонажа */
+        position: relative;
         min-height: 600px;
+        margin-top: 2rem; /* Добавляем отступ сверху */
     }
     
-    /* Контейнер для социальных сетей и баннера */
+    /* Контейнер для социальных сетей и баннера - выравниваем по той же сетке */
     .social-banner-container {
-        width: 50%;
+        width: 37% !important; /* Такая же ширина как у промокодов */
         margin-top: 0 !important;
         align-items: flex-start;
         position: relative;
-        z-index: 2; /* Размещаем над персонажем */
+        z-index: 2;
+        margin-left: auto; /* Выравниваем по правому краю */
     }
     
     /* Стили для блока с социальными сетями */
@@ -103,6 +158,7 @@
     /* Стили для новостных карточек */
     .news-card {
         transition: transform 0.3s ease;
+        position: relative;
     }
     
     .news-card:hover {
@@ -113,5 +169,25 @@
     #contact-me {
         padding-top: 6rem;
         padding-bottom: 6rem;
+    }
+}
+
+/* Стили для заголовков секций */
+#features h2, #promo h2 {
+    position: relative;
+    z-index: 10 !important; /* Значительно увеличиваем z-index */
+}
+
+/* Дополнительные стили для секции новостей */
+#features {
+    position: relative;
+    z-index: 2;
+    padding-top: 150px; /* Добавляем отступ сверху для компенсации */
+}
+
+/* Добавляем медиа-запрос для мобильных устройств */
+@media (max-width: 1023px) {
+    #features, #promo {
+        padding-top: 64px !important; /* Устанавливаем отступ 64px для обеих секций */
     }
 } 
