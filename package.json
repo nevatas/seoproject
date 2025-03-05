@@ -1,0 +1,17 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "SEO-оптимизированный лендинг",
+  "main": "index.html",
+  "scripts": {
+    "build": "tailwindcss -i ./css/input.css -o ./css/output.css",
+    "watch": "tailwindcss -i ./css/input.css -o ./css/output.css --watch",
+    "serve": "http-server -o"
+  },
+  "keywords": ["landing", "seo", "alpine", "tailwind"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+} 
