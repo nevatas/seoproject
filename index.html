@@ -7,6 +7,11 @@
     <meta name="keywords" content="ключевые, слова, для, seo">
     <meta name="author" content="Ваше имя">
     
+    <!-- Добавляем шрифт Inter от Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ваш-сайт.com/">
@@ -48,14 +53,14 @@
     }
     </script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-[#18162C] text-white font-inter">
     <main>
-        <!-- Hero секция - меняем фон и добавляем фоновое изображение -->
-        <section class="pt-8 pb-20 bg-[#18162C] relative" style="background-image: url('/assets/evelone/section1_bg.jpg'); background-size: cover; background-position: center;">
-            <!-- Уменьшаем прозрачность затемняющего слоя с 0.8 до 0.5 -->
+        <!-- Hero секция - убираем цвет фона, оставляем только фоновое изображение -->
+        <section class="pt-8 pb-20 relative" style="background-image: url('/assets/evelone/section1_bg.jpg'); background-size: cover; background-position: center;">
+            <!-- Уменьшаем прозрачность затемняющего слоя -->
             <div class="absolute inset-0 bg-[#18162C] opacity-50 z-0"></div>
             
-            <div class="container mx-auto px-4 text-center relative z-10 text-white">
+            <div class="container mx-auto px-4 text-center relative z-10">
                 <!-- Убираем нижний отступ у логотипа -->
                 <div class="flex justify-center">
                     <img src="/assets/evelone/logo.png" alt="Логотип компании" class="max-h-24 md:max-h-32 w-auto object-contain">
@@ -122,110 +127,31 @@
             </div>
         </section>
 
-        <!-- Здесь будут другие секции лендинга -->
-        
-        <!-- Секция "Возможности" -->
-        <section id="features" class="py-16 bg-white">
+        <!-- Обновляем цвета фона для других секций -->
+        <!-- Секция "Новости" -->
+        <section id="features" class="pt-16 pb-16 bg-[#3D2F72]">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">Наши возможности</h2>
+                <h2 class="text-[21px] font-medium mb-12 text-[#8F7DB4] uppercase tracking-wide mt-0">НОВОСТИ</h2>
                 <!-- Содержимое секции -->
             </div>
         </section>
-        
-        <!-- Секция "Преимущества" -->
-        <section id="benefits" class="py-16 bg-gray-50">
+
+        <!-- Секция "Промокоды" - такой же стиль как у "Новости", но без фона -->
+        <section id="promo" class="pt-16 pb-16">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">Преимущества</h2>
+                <h2 class="text-[21px] font-medium mb-12 text-[#8F7DB4] uppercase tracking-wide mt-0">ПРОМОКОДЫ</h2>
                 <!-- Содержимое секции -->
             </div>
         </section>
-        
-        <!-- Секция "Отзывы" -->
-        <section id="testimonials" class="py-16 bg-white">
+
+        <!-- Секция "Связаться со мной" - такой же стиль как у "Новости" -->
+        <section id="contact-me" class="pt-16 pb-16 bg-[#3D2F72]">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">Отзывы клиентов</h2>
+                <h2 class="text-[21px] font-medium mb-12 text-[#8F7DB4] uppercase tracking-wide mt-0">СВЯЗАТЬСЯ СО МНОЙ</h2>
                 <!-- Содержимое секции -->
-            </div>
-        </section>
-        
-        <!-- Секция "Контакты" -->
-        <section id="contact" class="py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">Свяжитесь с нами</h2>
-                <!-- Форма обратной связи -->
-                <div class="max-w-md mx-auto">
-                    <form x-data="{ 
-                        name: '', 
-                        email: '', 
-                        message: '',
-                        errors: {},
-                        submitForm() {
-                            this.errors = {};
-                            
-                            if (!this.name) this.errors.name = 'Пожалуйста, введите ваше имя';
-                            if (!this.email) this.errors.email = 'Пожалуйста, введите ваш email';
-                            if (!this.message) this.errors.message = 'Пожалуйста, введите сообщение';
-                            
-                            if (Object.keys(this.errors).length === 0) {
-                                // Здесь будет отправка формы
-                                alert('Форма отправлена!');
-                            }
-                        }
-                    }">
-                        <div class="mb-4">
-                            <label for="name" class="block text-gray-700 mb-2">Имя</label>
-                            <input type="text" id="name" x-model="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            <div x-show="errors.name" x-text="errors.name" class="text-red-500 mt-1 text-sm"></div>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="email" class="block text-gray-700 mb-2">Email</label>
-                            <input type="email" id="email" x-model="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            <div x-show="errors.email" x-text="errors.email" class="text-red-500 mt-1 text-sm"></div>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="message" class="block text-gray-700 mb-2">Сообщение</label>
-                            <textarea id="message" x-model="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                            <div x-show="errors.message" x-text="errors.message" class="text-red-500 mt-1 text-sm"></div>
-                        </div>
-                        
-                        <button type="button" @click="submitForm" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">Отправить</button>
-                    </form>
-                </div>
             </div>
         </section>
     </main>
-
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">О нас</h3>
-                    <p class="mb-4">Краткая информация о вашей компании или проекте.</p>
-                </div>
-                
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Контакты</h3>
-                    <p class="mb-2">Email: info@example.com</p>
-                    <p class="mb-2">Телефон: +7 (XXX) XXX-XX-XX</p>
-                    <p>Адрес: г. Москва, ул. Примерная, д. 123</p>
-                </div>
-                
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Подписаться на новости</h3>
-                    <form class="flex">
-                        <input type="email" placeholder="Ваш email" class="px-4 py-2 rounded-l-lg w-full focus:outline-none text-gray-800">
-                        <button type="submit" class="bg-blue-600 px-4 py-2 rounded-r-lg hover:bg-blue-700">OK</button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p>&copy; 2023 Название компании. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
 
     <!-- Подключение основного JavaScript файла -->
     <script src="js/main.js"></script>
